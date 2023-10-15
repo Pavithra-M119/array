@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>myTitle</title>
+    </head>
+    <body>
+        <script>
+            console.log(1);
+            function process()
+            {
+                let temp=new Promise((resolve,reject)=>{
+                    let x=10;
+                    if(x==10)
+                        resolve('Yes,it is resolved');
+                    else
+                        reject('yes,it is rejected');
+                     });
+                     temp.then(
+                        function(result) {console.log(result);},
+                        function(failed) {console.log(failed);}
+                     )
+            }
+            process();
+            console.log(3);
+        </script>
+    </body>
+</html>

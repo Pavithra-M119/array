@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>myTitle</title>
+    </head>
+    <body>
+        <div id="div1">
+            <h3 id="h3">Heading</h3>
+            <p id="p1" class:"red">paragrap</p>
+            <div id="div2">div container</div> 
+        </div>
+        <br></br>
+        <button onclick="process();">click</button>
+        <script>
+            function process()
+            {
+                let div1=document.querySelector("#div1");
+                let h3=document.querySelector("#h3");
+                let p1=document.querySelector("#p1");
+                let div2=document.querySelector("#div2");
+                let p2=document.createElement("p");
+                p2.innerHTML="This is a new paragraph";
+                p2.setAttribute("class","red");
+                div1.prepend(p2);
+                let h4=document.createElement("h4");
+                h4.innerHTML="This is a new heading";
+                h4.setAttribute("Style","background-color:pink;color:yellow");
+                div.append(h4);
+                let div3=document.createElement("div");
+                div3.innerHTML="Div container3";
+                div3.style.background="blue";
+                div3.style.color="black";
+                div1.insertBefore(div3,p1);
+            }
+        </script>
+    </body>
+</html>
